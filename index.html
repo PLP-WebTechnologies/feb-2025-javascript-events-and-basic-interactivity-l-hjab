@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0">
+        <meta name="author" content="Software engineer Daphine">
+        <meta name="keywords" content="">
+
+        <title>Event Handler</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="head-section">
+                <img  name="Logo-img" src="logo.png" width="50" height="50" alt="Logo of the company">
+                <ul id="nav-menu">
+                    <li> <a href="">Home</a></li>
+                    <li> <a href="">About Us</a></li>
+                    <li> <a href="">Services</a></li>
+                    <li> <a href="">Offers</a></li>
+                    <li> <a href="">Contact Us</a></li>
+                
+                </ul>
+            </div>
+        </header>
+        <section>
+            <div id="Home-page">
+                <h1>Let's turn things into magic</h1>
+                <img src="" alt="background-image">
+                <p>We Offers best services that will make your relocation fun</p>
+                <div id="btn-content">
+                    <button id="btnExplore"> Explore More</button>
+                    <button id="btnContact" >Contact Us</button>
+                </div>
+                <div id="resultDiv">
+                    <p></p>
+                </div>
+            </div>
+            <div id="form">
+                <h1>Sign Up Form</h1>
+
+            </div>
+        </section>
+        <script>
+            let buttonClicked=document.getElementById('btn-explore');
+            const btnContact=document.getElementById('btnContact');
+            const resultDiv=document.getElementById('resultDiv')
+
+            btnContact.addEventListener('click',function(){
+                resultDiv.textContent='Hey! Whatsup ,email us';
+                resultDiv.style.color='orange';
+                resultDiv.style.backgroundColor='gray';
+            });
+            buttonClicked.addEventListener('mouseover',function(){
+                buttonClicked.style.backgroundColor='green';
+                buttonClicked.style.color='darkcyan';
+                buttonClicked.style.fontWeight='bold';
+            });
+
+        </script>
+    </body>
+</html>

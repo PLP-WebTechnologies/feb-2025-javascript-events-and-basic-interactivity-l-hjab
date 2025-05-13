@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0">
+        <title>Interactive Button</title>
+        <style>
+            body{
+                max-width:600px;
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: bisque;
+                border: 1px solid gray;
+                
+            }
+            h1{
+                color: brown;
+            }
+            #textBtn{
+                padding: 10px 10px;
+                background-color: blue;
+                color: wheat;
+                font-weight: 400;
+                font-size: 16px;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+            }
+            #textArea{
+                padding: 10px;
+                margin: 20px;
+                margin: 20px;
+                border: 1px solid gray;
+            }
+            #hoverBtn{
+                padding: 10px 10px;
+                background-color: skyblue;
+                
+                font-weight: 400;
+                font-size: 15px;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Interactive  with Javascript</h1>
+        <div class="button-contonainer">
+            <button id="textBtn">Click to change the content</button>
+            <div id="textArea">This content will be change after clicking the above content</div>
+            <button id="hoverBtn">Click to se e the magic</button>
+
+        </div>
+        <script>
+            //declaring variables
+            const textChangeBtn=document.getElementById('textBtn');
+            const msgArea=document.getElementById('textArea');
+            const hoveredButton=document.getElementById('hoverBtn')
+
+            textChangeBtn.addEventListener('click',function(){
+                msgArea.textContent='Congratulations Daphine,Keep it Up';
+                msgArea.style.backgroundColor='gray';
+                msgArea.style.color='white';
+                msgArea.style.fontWeight='bold';
+            });
+            hoveredButton.addEventListener('mouseover',function(){
+                hoveredButton.textContent='Hey! Whats up'
+                hoveredButton.style.backgroundColor='orange';
+                
+            });
+
+
+        </script>
+    </body>
+
+</html>
